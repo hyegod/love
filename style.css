@@ -5,7 +5,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-size: 1000px;
   background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
   background-position: center center;
@@ -13,35 +12,66 @@ body {
 
 .paper {
   background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
-  background-size: 600px;
+  background-size: 800px;
   background-position: center center;
-  padding: 20px 150px;
   transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
   position: absolute;
 }
 
+@media (min-width: 1024px) {
+  .paper {
+    padding: 20px 100px;
+  }
+
+  .paper.image {
+    padding: 10px;
+  }
+
+  .paper.image p {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .paper {
+    padding: 40px 200px;
+  }
+
+  .paper.image {
+    padding: 20px;
+    font-weight: bolder;
+  }
+
+  .paper.image p {
+    font-size: 50px;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 70px;
+    font-weight: bolder;
+  }
+}
+
 .paper.heart {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   padding: 0;
   border-radius: 50%;
 }
 
-.paper.image {
-  padding: 10px;
-}
-
-.paper.image p {
-  font-size: 30px;
-}
-
 img {
-  max-height: 200px;
+  max-height: 400px;
   width: 100%;
   user-select: none;
-  object-fit: cover; /* This ensures the image will be cropped to fit the container */
+  object-fit: cover;
 }
 
 .paper.heart::after {
@@ -52,7 +82,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-size: 150px;
+  background-size: 250px;
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.6;
@@ -60,7 +90,7 @@ img {
 
 p {
   font-family: 'Zeyada';
-  font-size: 40px;
+  font-weight: bolder;
   color: rgb(0,0,100);
   opacity: 0.75;
   user-select: none;
