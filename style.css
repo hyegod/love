@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-
-
-
 body {
   height: 100vh;
   display: flex;
@@ -16,14 +13,11 @@ body {
 
 .paper {
   background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
-  background-size: 500px;
+  background-size: 600px;
   background-position: center center;
-  padding: 20px 100px;
-/*  min-width: 800px; */
-  
+  padding: 20px 150px;
   transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  
   position: absolute;
 }
 
@@ -38,6 +32,7 @@ body {
 .paper.image {
   padding: 10px;
 }
+
 .paper.image p {
   font-size: 30px;
 }
@@ -46,6 +41,7 @@ img {
   max-height: 200px;
   width: 100%;
   user-select: none;
+  object-fit: cover; /* This ensures the image will be cropped to fit the container */
 }
 
 .paper.heart::after {
@@ -64,10 +60,8 @@ img {
 
 p {
   font-family: 'Zeyada';
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(0,0,100);
   opacity: 0.75;
   user-select: none;
-  
-  // filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9));
 }
